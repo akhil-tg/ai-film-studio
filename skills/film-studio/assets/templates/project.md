@@ -8,12 +8,14 @@
 - **Unit length:** 
 - **Unit count:** 
 - **Language:** 
+- **Set in:** <place — e.g. Kerala, central Travancore>
+- **Subtitles:** none (default) | burned-in | separate track
 - **Genre:** 
 - **Tone:** 
 - **Audience / platform:** 
 - **Publish cadence:** 
 - **Resolution strategy:** draft 360p → approve → 720p/1080p
-- **Voice plan:** generated | self-recorded | narration (needed for non-English)
+- **Voice plan:** native Flow speech (default) | self-recorded | narration
 - **Status:** discovery | bible | plan | writing | rendering
 
 ## Format reference

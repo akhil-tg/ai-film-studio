@@ -17,7 +17,13 @@
 wearing <exact garment + colour>, <one distinguishing mark>.
 ```
 
-**Voice:** pitch, pace, accent, one verbal habit.
+**Voice (locked — paste verbatim into every prompt where they speak):**
+
+```
+Voice: <register>; <language> with a <region> accent; <texture / pace>.
+```
+
+**Verbal habit:** one phrase or tic, used at most twice in a season.
 
 **Want:** 
 **Obstacle:** 
@@ -37,7 +43,12 @@ wearing <exact garment + colour>, <one distinguishing mark>.
 ...
 ```
 
-**Voice:** 
+**Voice (locked — paste verbatim into every prompt where they speak):**
+
+```
+...
+```
+
 **Want:** 
 **Obstacle:** 
 **Contradiction:** 

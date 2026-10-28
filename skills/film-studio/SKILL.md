@@ -80,10 +80,13 @@ Read the format file **before** planning structure. It decides the beat template
 2. **Always number choices. Never bullets or letters.** A user replies with `1`, `2`, `3`. Accept the digit or the name. Every option list follows this, except the format list above, which is fixed.
 3. **Max 3 questions per turn**, each with 2–3 concrete options plus a final "something else" option. Never ask an open question a beginner can't answer.
 4. **Lock the bible.** Descriptions are pasted *verbatim* into every prompt. No synonyms, no rephrasing.
-5. **One shot = one action = one camera move.** If it needs "and then", it's two shots.
-6. **Generations are ≤10s. Shots are cut to 2–4s.** Plan for trimming.
-7. **Approve before volume.** Yes on the brief before scripts. Never dump 400 lines unasked.
-8. **Declare the aspect ratio once**, in `project.md`, and never mix it within a project.
+5. **Prompts are English; dialogue is native.** All scene, camera, and style language is English. Any spoken line is quoted verbatim in the project language, in native script, inside the prompt. Never translate a line into English inside a prompt.
+6. **Voice is locked like a face.** A fixed voice descriptor, pasted verbatim into every shot where that character speaks.
+7. **One shot = one action = one camera move.** If it needs "and then", it's two shots.
+8. **Generations are ≤10s. Shots are cut to 2–4s.** Plan for trimming.
+9. **Approve before volume.** Yes on the brief before scripts. Never dump 400 lines unasked.
+10. **Declare the aspect ratio once**, in `project.md`, and never mix it within a project.
+11. **No subtitles unless asked.** On-screen hook text is not a subtitle.
 
 
 ## Phase 0 — Discovery
@@ -116,6 +119,9 @@ Ads and music videos replace these — use the format file's own structure inste
 
 Always include the "something else" option as the last number, and always end with how to answer. Wait before the next batch.
 
+**Set the language.** Infer it from how the user writes, and from the idea itself. If they write in Malayalam, or ask for a Malayalam film, that's the project language — don't ask. If it's genuinely unclear, make it one of your three questions.
+
+Once set, `project.md` records `Language:` and `Subtitles:`, and you read `references/core/language.md` before writing any dialogue. That file governs how a line goes into a prompt.
 
 **Write the brief and stop.** Create the project folder, write `project.md` and `00-brief.md`, summarise in chat, wait for a yes.
 
@@ -153,7 +159,7 @@ In **file mode** each step is a file the next step reads. In **chat mode** the s
 
 1. **Beats** → `unit/story.md` (or `narration.md` for documentary)
 2. **Storyboard** → `unit/storyboard.csv`, one row per shot
-3. **Script** → `unit/script.md` — dialogue and sound only
+3. **Script** → `unit/script.md` — dialogue and sound only. Native-script line plus English paraphrase. Read `references/core/language.md` first.
 4. **Prompts** → `unit/prompts.md`, copy-paste ready
 5. **Caption / package** → `unit/caption.md` (title, thumbnail, text overlays)
 6. **Continuity** → append to `continuity.md`
@@ -164,8 +170,13 @@ One block, fixed order:
 
 ```
 [locked description] + [action] + [setting] + [camera] +
-[lighting] + [style] + [audio] + [negatives] + [aspect]
+[lighting] + [style] + [dialogue + voice] + [ambience + effects] +
+[negatives] + [aspect]
 ```
+
+Dialogue and its voice line come **before** ambience — audio clauses buried late get dropped by the model.
+
+Read `references/core/language.md` before writing any line of dialogue, and `references/languages/<language>.md` if it exists.
 
 Per shot, also state:
 - **Task mode** — `text_to_video`, `image_to_video`, `reference_to_video`, `edit`, `extend`
@@ -221,6 +232,8 @@ Read on demand — not all at once.
 |---|---|
 | `references/core/story-structure.md` | beats, arcs, hooks at any length |
 | `references/core/dialogue-audio.md` | dialogue and sound |
+| `references/core/language.md` | any non-English project |
+| `references/languages/<language>.md` | a language with a dedicated file |
 | `references/core/flow-prompt-grammar.md` | any prompt |
 | `references/core/shot-grammar-vertical.md` | 9:16 storyboards |
 | `references/core/shot-grammar-horizontal.md` | 16:9 storyboards |

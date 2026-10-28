@@ -8,7 +8,8 @@ Fixed. Same sequence every time, so results are comparable and debuggable:
 
 ```
 [locked description] + [action] + [setting] + [camera: size + move] +
-[lighting] + [style] + [audio] + [negatives] + [aspect]
+[lighting] + [style] + [dialogue + voice] + [ambience + effects] +
+[negatives] + [aspect]
 ```
 
 Example:
@@ -63,13 +64,23 @@ Google's guidance: prompt first, use `task` when the model guesses wrong or the 
 
 ## Audio is part of the prompt
 
-Omni generates audio natively. Silent-feeling output is usually a prompt problem.
+Omni generates audio natively, including speech in many languages. Silent-feeling output is usually a prompt problem.
 
 Always specify:
 
-- **Dialogue** — the exact line and who says it
+- **Dialogue** — the exact line, in the project language, in native script, and who says it
+- **Voice** — the locked descriptor, verbatim, for any shot with speech
 - **Ambience** — room tone, weather, crowd, traffic
 - **Effects** — sounds tied to the action
+
+```text
+He says in Malayalam: "അമ്മേ, എനിക്ക് പേടിയാകുന്നു."
+Voice: low, warm, unhurried; Malayalam with a Thrissur accent.
+```
+
+Dialogue and voice go **before** ambience. Clauses at the end of a long prompt get dropped first.
+
+For a non-English project, never translate the line into English and never romanise it — see `language.md`.
 
 And what you *don't* want:
 

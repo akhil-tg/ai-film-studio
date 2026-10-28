@@ -38,25 +38,24 @@ Plan all four at script stage — never after.
 
 | Layer | Source | Notes |
 |---|---|---|
-| **Dialogue** | Generated, or self-recorded | See the language caveat |
+| **Dialogue** | Generated natively in-prompt | Lock the voice descriptor — see `language.md` |
 | **Ambience** | Generated | Room tone. Without it, cuts feel like slideshows. |
 | **Effects** | Generated | One per significant action. |
 | **Music** | Generated or licensed | Optional. Often better absent. |
 
 **Every shot gets an ambience line**, even "silence, wind". Blank audio is what makes AI video feel fake.
 
-## The language problem
+## Language
 
-AI speech is reliable in English, inconsistent in Malayalam, Tamil, Hindi, Arabic, and most others — accent, rhythm, and pronunciation drift between clips.
+Omni speaks many languages natively, so dialogue goes **into the prompt** rather than into a later dub pass.
 
-If the project isn't in English:
+- Write the line in the **project language, in native script**. Never translate it into English inside the prompt, and never romanise it — script carries pronunciation.
+- Add the **locked voice descriptor** immediately after the line, verbatim from the bible.
+- Keep lines to **one sentence per shot**. Long lines rush and drift.
 
-- Write dialogue **in the target language** in `script.md`.
-- Plan to **record voices yourself**, or use a dedicated TTS tool.
-- Generate Flow shots with **no dialogue audio**, then dub over the edit.
-- Say this at discovery. It changes the whole workflow; don't reveal it at episode 4.
+Full rules in `language.md`. Per-language notes (accents, fonts, visual vocabulary) in `languages/<language>.md`.
 
-Prompt consequence: `No dialogue. Only ambience: ...`
+**Fallback only if native speech fails:** generate with `No dialogue. Only ambience: ...` and dub in the edit. Don't do this by default — it costs you lip sync and the performance.
 
 ## Sound-on design
 

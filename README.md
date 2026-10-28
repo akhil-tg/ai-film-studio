@@ -98,6 +98,28 @@ Every option list is **numbered**. Reply with a digit — `1`, `2`, `3` — or t
 
 Repeat per unit. Or just talk to it — the skill triggers on its own when you ask for a short film, storyboard, shot list, or Flow prompts.
 
+## Other languages
+
+You can make a film in **any language Flow speaks** — Malayalam, Tamil, Hindi, and so on. The split is simple:
+
+> **Prompts are English. Dialogue is native.**
+
+Scene, camera, lighting, and style are written in English, because that's what the model reads best. Spoken lines are quoted verbatim in the project language, in native script, inside the prompt:
+
+```
+He says in Malayalam: "അമ്മേ, എനിക്ക് പേടിയാകുന്നു."
+Voice: low, warm, unhurried; Malayalam with a Thrissur accent.
+```
+
+No dubbing, no recording pass, no translation. Omni speaks the line itself.
+
+Two things that matter more than you'd expect:
+
+- **The voice line is locked** and pasted verbatim, exactly like a face description — otherwise the character sounds like a different person in every clip.
+- **No subtitles by default.** They're added only if you ask. (On-screen hook text is not a subtitle.)
+
+Malayalam has its own reference file: accents, voice locking, fonts for on-screen text, and Kerala visual vocabulary that keeps the film from looking like generic AI-India.
+
 ## What you get
 
 ```
@@ -128,7 +150,7 @@ my-project/
 | Generate & choose reference images | visual judgement |
 | Upload refs in order | Flow is manual |
 | Paste prompts, pick takes | directing |
-| Record voice (non-English) | AI voices drift in Malayalam/Tamil/Hindi |
+| Keep the voice consistent | speech drifts between clips, like faces do |
 | Edit, caption, publish | your workflow |
 | Verify facts (documentary) | accuracy is your responsibility |
 
@@ -142,7 +164,8 @@ ai-film-studio/
 ├── skills/film-studio/
 │   ├── SKILL.md
 │   ├── references/
-│   │   ├── core/        story, dialogue, prompt grammar, shot grammar ×2
+│   │   ├── core/        story, dialogue, language, prompt grammar, shot grammar ×2
+│   │   ├── languages/   per-language accents, fonts, voice notes
 │   │   └── formats/     one file per format
 │   └── assets/templates/
 ├── commands/
@@ -153,9 +176,11 @@ ai-film-studio/
 
 ## Honest limits
 
+The plugin prompts Google Flow / Gemini Omni — it doesn't render anything itself. You still paste the prompts, pick the takes, and edit. What it removes is the blank page: structure, characters, shots, and prompts arrive ready to use.
+
 - Flow's UI is manual. Nothing here automates generation.
 - Character consistency is *good*, not perfect. Same references + verbatim descriptions get you most of the way.
-- Non-English dialogue should be recorded and dubbed, not generated.
+- Voices drift between clips the same way faces do — the fix is a locked voice descriptor, not re-recording.
 - Talking heads are AI's weakest output — documentaries here are narration + b-roll by design.
 - Cost is real: a 10-minute film is ~150–200 generations with retries.
 - This is a pre-production tool. The edit is where a film is actually made.
