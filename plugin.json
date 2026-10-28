@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ai-film-studio",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Pre-production studio for AI-made films in Google Flow / Gemini Omni: locked bible, structure plan, storyboard, screenplay, and copy-paste prompts for eight formats, in any language Flow speaks.",
   "author": {
     "name": "Akhil TG",

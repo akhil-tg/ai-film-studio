@@ -128,6 +128,24 @@ Two things that matter more than you'd expect:
 
 Malayalam has its own reference file: accents, voice locking, fonts for on-screen text, and Kerala visual vocabulary that keeps the film from looking like generic AI-India.
 
+## Long sessions
+
+The window fills faster than you'd expect — a storyboard plus its prompts is tens of thousands of tokens. Three episodes in one chat and the model starts inventing wardrobe.
+
+Built into the skill:
+
+- **One unit per chat.** It tells you when to start a fresh one.
+- **Batches of 6–8 shots** for `storyboard.csv` and `prompts.md`.
+- **No bible restatement** — only the lines a batch actually uses.
+- **Files over pasted text**, wherever the host can write files.
+- **Continuity as a log** — one line per unit, not prose.
+
+What you do:
+
+1. Put the project in a **Project** and keep the files there.
+2. Start a **new chat per episode** and say `continue`.
+3. Or just let it tell you — it will say when the unit is done.
+
 ## What you get
 
 ```

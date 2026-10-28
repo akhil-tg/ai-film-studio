@@ -55,8 +55,20 @@ Chats don't share a folder; a **Project** does. A Project holds the brief, bible
 
 Without a Project:
 
-1. **Re-state the locked bible** at the start of each unit, in a collapsed block, so descriptions stay byte-identical.
+1. **Re-state only the lines you need** — the two or three bible descriptions used in this batch, not the whole sheet.
 2. **Unfamiliar project?** Ask the user to paste back the brief and the continuity log before writing anything. If they can't, restart discovery rather than inventing.
+
+## Context budget — the real constraint
+
+Long projects die from a full window, not from bad prompts. Every token you spend re-reading is a token that can't hold episode 3's continuity.
+
+1. **One unit per chat.** When a unit is finished, end with: *"This unit is done. Start a new chat for the next one and say `continue` — I'll read the project files."* Never write two episodes in one thread.
+2. **Files over text.** If the host can write files, every document goes to a file and the chat holds only the decision. A pasted document costs context forever; a file costs nothing until it's needed.
+3. **Never restate the whole bible.** Quote the lines this batch uses. A 60-word block per character is right; four characters restated every message is not.
+4. **Batch the two long ones.** `storyboard.csv` and `prompts.md` are where windows die. Deliver **6–8 shots per message** and end with *"Say next for shots 9–16."*
+5. **Continuity is a log, not prose.** One line per unit. If it needs scrolling, it has become a summary — cut it back.
+6. **Don't echo.** No "here's what I just did" recap. The document is the answer.
+7. **Re-read from files, never from memory.** When resuming, read `project.md` and `continuity.md` before writing a word. If they aren't available, ask — don't reconstruct from the conversation.
 
 ## Step 0 — Language
 
@@ -214,6 +226,8 @@ Then tell the user: *"Generate one reference image per character and per main lo
 A unit is an episode, a sequence, or a scene — whatever the format calls it.
 
 In **files** mode each step is a file the next step reads. In **chat** the same order applies, but one document per message, waiting for `next` between each. Never skip ahead.
+
+`storyboard.csv` and `prompts.md` ship in batches of 6–8 shots. Say so in the header: `### prompts.md — shots 1–8 of 14`.
 
 1. **Beats** → `unit/story.md` (or `narration.md` for documentary)
 2. **Storyboard** → `unit/storyboard.csv`, one row per shot

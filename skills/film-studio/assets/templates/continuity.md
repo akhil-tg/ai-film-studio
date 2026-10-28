@@ -2,6 +2,10 @@
 
 > Append after every unit. Read before writing the next one.
 > If a new idea conflicts with anything here, stop and ask.
+>
+> **Keep it lean.** One line per fact, one line per change. This file is read
+> into every new chat, so its length costs you context. If it needs scrolling,
+> compress it.
 
 ## Established facts
 
