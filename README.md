@@ -32,15 +32,17 @@ Four things ruin AI films: **inconsistent characters**, **shots that can't be ge
 
 ## Install
 
+From GitHub:
+
 ```bash
-/plugin marketplace add "D:\CODING\Skill\ai-film-studio"
+/plugin marketplace add akhil-tg/ai-film-studio
 /plugin install ai-film-studio@ai-film-studio-marketplace
 ```
 
-Dev mode, no install:
+From a local clone, without installing:
 
 ```bash
-claude --plugin-dir "D:\CODING\Skill\ai-film-studio"
+claude --plugin-dir /path/to/ai-film-studio
 ```
 
 ## Use
