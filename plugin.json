@@ -1,0 +1,52 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ai-film-studio",
+  "version": "1.0.0",
+  "description": "Pre-production studio for AI-made films in Google Flow / Gemini Omni: locked bible, structure plan, storyboard, screenplay, and copy-paste prompts for eight formats, in any language Flow speaks.",
+  "author": {
+    "name": "Akhil TG",
+    "url": "https://github.com/akhil-tg"
+  },
+  "homepage": "https://github.com/akhil-tg/ai-film-studio",
+  "repository": "https://github.com/akhil-tg/ai-film-studio",
+  "license": "MIT",
+  "keywords": [
+    "ai-film",
+    "short-film",
+    "reels",
+    "youtube-shorts",
+    "web-series",
+    "screenplay",
+    "storyboard",
+    "shot-list",
+    "commercial",
+    "music-video",
+    "trailer",
+    "documentary",
+    "google-flow",
+    "gemini-omni",
+    "multilingual"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "AI Film Studio",
+        "shortDescription": "Turn a rough idea into a shot-ready plan for Google Flow.",
+        "longDescription": "Pre-production for AI films, start to finish. Give it one line — a vibe, a half-scene, a photo — and it builds the story, the locked character bible, the structure, the storyboard, the screenplay, and copy-paste Flow prompts. Eight formats: vertical Reels, YouTube Shorts, landscape short films, long-form episodes, ads, music videos, trailers, documentaries. Works in any language Flow speaks: prompts stay English, dialogue is written in the project language so Omni speaks it natively.",
+        "developerName": "Akhil TG",
+        "category": "Productivity",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "websiteURL": "https://github.com/akhil-tg/ai-film-studio",
+        "defaultPrompt": [
+          "Start a Malayalam Reel series about a boy who finds a phone that shows the future.",
+          "Storyboard episode 1 of my vertical drama and write the Flow prompts.",
+          "I have a vague idea for a 10-minute short film — build the story, characters, and shot list."
+        ],
+        "brandColor": "#1F6F5C"
+      }
+    }
+  }
+}
