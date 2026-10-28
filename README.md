@@ -32,7 +32,7 @@ Four things ruin AI films: **inconsistent characters**, **shots that can't be ge
 
 ## Install
 
-From GitHub:
+From GitHub (Claude Code — this gets you slash commands and file output):
 
 ```bash
 /plugin marketplace add akhil-tg/ai-film-studio
@@ -44,6 +44,31 @@ From a local clone, without installing:
 ```bash
 claude --plugin-dir /path/to/ai-film-studio
 ```
+
+## Install on claude.ai
+
+claude.ai has no plugin system — it takes **skills** as a ZIP.
+
+1. Download [`dist/film-studio-skill.zip`](dist/film-studio-skill.zip)
+2. claude.ai → **Settings → Capabilities → Skills** (may appear as **Customize → Skills**)
+3. **+ → Create skill → Upload a skill** → pick the ZIP
+4. Turn on **file creation** if you want downloadable `storyboard.csv` etc.
+
+Rebuild the ZIP after editing the skill:
+
+```bash
+powershell -ExecutionPolicy Bypass -File scripts/build-skill-zip.ps1
+```
+
+**What's different in chat mode** (encoded in `SKILL.md`):
+
+| | Claude Code | claude.ai |
+|---|---|---|
+| Trigger | `/ai-film-studio:start` | ask in plain English |
+| Output | files in a folder | one document per message |
+| Continuity | `continuity.md` on disk | paste it back, or use a Claude Project |
+| Updates | `git pull` | re-upload the ZIP |
+
 
 ## Use
 
