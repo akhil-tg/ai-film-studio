@@ -41,7 +41,7 @@ A storyboard says "kitchen". Twenty generations later there are four kitchens. T
 
 ## Order of work
 
-1. Lock the world description in `bible/world.md`
+1. Lock the world description in `story.md`
 2. Generate the establishing angle first
 3. Reuse it as a reference for the other angles
 4. Keep file names stable: `refs/kitchen-wide.png`

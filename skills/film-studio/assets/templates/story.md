@@ -1,30 +1,32 @@
-# unit-01 — <TITLE>
+# <PROJECT> — story
 
-**Runtime target:** · **Shots:** · **Language:** 
+**Format:** · **Episodes:** · **Episode length:** · **Language:** · **Music:**
+
+## Premise
+
+One paragraph. Who, what they want, what blocks them, how they change, how it ends.
 
 ## Beats
 
-| Time | Beat | What happens |
+| # | Beat | What happens |
 |---|---|---|
-| | | |
+| 1 | | |
+| 2 | | |
+| 3 | | |
 
-## The question this unit asks
+## Continuity
 
-What does it leave the viewer asking?
+> Rules that must never drift. Read this before every episode.
 
-## A / B story (long formats only)
+- **World:**
+- **Timeline:**
+- **Seeded, not yet paid off:**
 
-- **A story:** 
-- **B story:** 
-- **Where they meet:** 
+## Episodes
 
-## What must be true at the end
+| # | One line | Status |
+|---|---|---|
+| 1 | | not written |
+| 2 | | not written |
 
-> Facts the next unit depends on. Mirror these into `continuity.md`.
-
-- 
-
-## Notes
-
-- Constraints carried in from `continuity.md`:
-- New elements introduced:
+Status: `not written` · `scripted` · `shot` · `posted`

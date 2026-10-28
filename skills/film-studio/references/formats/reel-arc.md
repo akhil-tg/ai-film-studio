@@ -101,6 +101,6 @@ Generations are ≤10s; shots cut to 2–4s. Budget retries at roughly 1.3× the
 
 ## Deliverable deltas
 
-- `series.md` holds the act map and the one-line episode index — it's the resume file
+- `story.md` holds the act map and the one-line episode index — it's the resume file
 - `continuity.md` holds only what never changes: faces, voices, wardrobe, rules
 - Every episode's prompts repeat the same locked blocks, verbatim

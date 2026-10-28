@@ -62,8 +62,8 @@ This is where AI ads fail. The product must be **consistent and legible**:
 
 ## Deliverable deltas
 
-- `00-brief.md` → tension, product role, proof, action, mandatory product reference
-- `bible/motifs.md` → brand colours, logo placement, product angles
+- `story.md` → tension, product role, proof, action, mandatory product reference
+- `story.md` → brand colours, logo placement, product angles
 - `caption.md` → primary text, headline, CTA, legal line
 
 ## Failure modes

@@ -48,7 +48,7 @@ Rules:
 
 ## Visual language
 
-Documentaries run on **motifs**, not characters. Fill `bible/motifs.md`:
+Documentaries run on **motifs**, not characters. Fill `story.md`:
 
 - Recurring image types (archives, maps, hands, textures)
 - A colour grade that implies era or mood
@@ -65,10 +65,10 @@ This format makes factual claims, so:
 
 ## Deliverable deltas
 
-- `00-brief.md` → thesis, audience, what the viewer learns
+- `story.md` → thesis, audience, what the viewer learns
 - `plan.md` → chapter outline with claims and evidence
 - `unit/narration.md` → replaces `story.md`; two-column narration + visual
-- `bible/motifs.md` → recurring imagery and grade
+- `story.md` → recurring imagery and grade
 - `caption.md` → title, thumbnail text, description with sources
 
 ## Failure modes

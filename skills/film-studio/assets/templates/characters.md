@@ -1,69 +1,57 @@
 # Characters
 
-> LOCKED. Paste these blocks verbatim into every prompt. Never reword, shorten, or reorder.
-> Generate one reference image per character and reuse the same file every time.
+> One plain prompt per character. Paste it into Flow exactly as written.
+> Save the result as `refs/<name>-sheet.png` and never overwrite it.
+> The same description goes verbatim into every shot prompt.
 
 ---
 
 ## <NAME>
 
-**Role:** protagonist / antagonist / supporting
-**Reference image:** `refs/<name>.png`
+**Role:** · **Species (if animals):**
 
-**Locked prompt block (40–60 words):**
-
-```
-<Name>, <age>, <build>, <skin tone>, <face shape>, <eyes>, <hair: length + style + colour>,
-wearing <exact garment + colour>, <one distinguishing mark>.
-```
-
-**Voice (locked — paste verbatim into every prompt where they speak):**
+**Voice — verbatim wherever they speak:**
 
 ```
 Voice: <register>; <language> with a <region> accent; <texture / pace>.
 ```
 
-**Verbal habit:** one phrase or tic, used at most twice in a season.
+**Prompt — copy this block:**
 
-**Want:** 
-**Obstacle:** 
-**Contradiction:** 
-**Changes by the end:** 
+```
+<one continuous paragraph, 80-150 words: reference sheet, four views, full description, wardrobe, one distinguishing mark, neutral background, negatives, aspect ratio>
+```
+
+**Saved as:** `refs/<name>-sheet.png`
 
 ---
 
-## <NAME>
+## <NAME 2>
 
-**Role:** 
-**Reference image:** `refs/<name>.png`
+**Role:** · **Species (if animals):**
 
-**Locked prompt block (40–60 words):**
-
-```
-...
-```
-
-**Voice (locked — paste verbatim into every prompt where they speak):**
+**Voice — verbatim wherever they speak:**
 
 ```
-...
+Voice: ...
 ```
 
-**Want:** 
-**Obstacle:** 
-**Contradiction:** 
-**Changes by the end:** 
+**Prompt — copy this block:**
+
+```
+<one continuous paragraph>
+```
+
+**Saved as:** `refs/<name-2>-sheet.png`
 
 ---
 
 ## Wardrobe continuity
 
-| Character | Unit range | Outfit |
+| Character | Episodes | Outfit |
 |---|---|---|
 | | | |
 
 ## Never change
 
-> Details that must stay identical for the whole project.
-
-- 
+-

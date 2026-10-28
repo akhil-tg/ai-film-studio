@@ -17,7 +17,7 @@ Order matters: **action → line → voice → ambience → negatives**.
 
 ## The voice line
 
-Locked in `bible/characters.md`, pasted verbatim everywhere the character speaks. Pick from:
+Locked in `characters.md`, pasted verbatim everywhere the character speaks. Pick from:
 
 | Quality | Options |
 |---|---|
@@ -88,7 +88,7 @@ Generic "India" in AI video means turmeric-lit temples, turbans, and auto-ricksh
 | Interiors | wooden shutters, ceiling fans, steel almirah, plastic chairs |
 | Food/teashop | glass tumblers, steel plates, banana leaf, red plastic chairs |
 
-Put the chosen set in `bible/style.md` so it stays consistent.
+Put the chosen set in `project.md` so it stays consistent.
 
 ## Common failures
 

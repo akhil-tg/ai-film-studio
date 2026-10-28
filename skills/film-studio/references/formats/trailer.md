@@ -44,7 +44,7 @@ Teaser (30s): 0–8 world · 8–20 escalation · 20–27 montage · 27–30 tit
 ## Text
 
 - Title cards are **separate beats**, not overlays. Budget a shot each.
-- Font and treatment locked in `bible/style.md` — a trailer's typography is half its identity.
+- Font and treatment locked in `project.md` — a trailer's typography is half its identity.
 - Release line: date, platform, or "coming soon".
 
 ## Building it from an existing project

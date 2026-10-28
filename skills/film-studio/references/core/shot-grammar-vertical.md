@@ -73,7 +73,7 @@ Mostly **hard cuts**. To make them feel intentional:
 - Max ~6 words per card.
 - Inside the safe band, usually the lower third of the *safe* area.
 - High contrast: white with soft shadow, or a solid bar.
-- One style for the whole project — locked in `bible/style.md`.
+- One style for the whole project — locked in `project.md`.
 
 ## Lighting
 

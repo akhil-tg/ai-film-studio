@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ai-film-studio",
-  "version": "2.4.0",
-  "description": "Pre-production studio for AI-made films in Google Flow / Gemini Omni: story and continuity, cast (human or anthropomorphic animal), storyboard, screenplay with cinematic dialogue, character sheets, and copy-paste prompts for eight formats, in any language Flow speaks.",
+  "version": "3.0.0",
+  "description": "Pre-production for AI films in Google Flow / Gemini Omni: story and continuity, human or anthropomorphic animal casts, storyboard, script, character and location prompts, and scene-by-scene Flow prompts, in any language Flow speaks.",
   "author": {
     "name": "Akhil TG",
     "url": "https://github.com/akhil-tg"
@@ -34,7 +34,7 @@
       "interface": {
         "displayName": "AI Film Studio",
         "shortDescription": "Turn a rough idea into a shot-ready plan for Google Flow.",
-        "longDescription": "Pre-production for AI films, start to finish. Give it your storyline and it develops the story and continuity, recommends a format for your platform, casts humans or anthropomorphic animals, storyboards the whole story, writes the screenplay with spoken, cinematic dialogue, builds multi-angle character sheets and location plates, then breaks down each episode into scenes and copy-paste Flow prompts. Music is a choice made once; effects and ambience are never optional. Built for vertical films told episode by episode, and equally at home with Reels, YouTube Shorts, landscape short films, long-form episodes, ads, music videos, trailers, and documentaries. Works in any language Flow speaks: prompts stay English, dialogue is written in the project language so Omni speaks it natively.",
+        "longDescription": "Pre-production for AI films, without the clutter. Five questions — language, storyline, platform, cast, music — then four documents: characters, story, storyboard, script. Each character gets one plain prompt that returns a four-view reference sheet. Each Flow prompt is one plain paragraph, 90-130 words, with no labels to fill in. Prompts arrive scene by scene, one scene per message, after a single block of standing instructions for the Flow agent. Animals are anthropomorphic and no humans appear anywhere. Music is chosen once; effects and ambience are never optional. Works in any language Flow speaks: prompts stay English, dialogue is written in the project language so Omni speaks it natively.",
         "developerName": "Akhil TG",
         "category": "Productivity",
         "capabilities": [

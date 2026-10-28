@@ -60,7 +60,7 @@ Then the music clause. If the project chose **no music**, end with `No music.` I
 
 ## Paste the bible verbatim
 
-The description comes from `bible/characters.md` **byte for byte**. No synonyms, no shortening, no reordering. Small wording changes read as a different person. This is the entire point of the bible.
+The description comes from `characters.md` **byte for byte**. No synonyms, no shortening, no reordering. Small wording changes read as a different person. This is the entire point of the bible.
 
 Same for locations: paste, don't paraphrase.
 

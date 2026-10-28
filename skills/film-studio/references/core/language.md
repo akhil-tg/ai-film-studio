@@ -48,7 +48,7 @@ Voice: low, warm, unhurried; <language> with a <region> accent;
 speaks slightly under the breath.
 ```
 
-Put it in `bible/characters.md` and in the prompt for any shot where the character speaks. Never vary the wording.
+Put it in `characters.md` and in the prompt for any shot where the character speaks. Never vary the wording.
 
 ## Subtitles: off by default
 
