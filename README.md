@@ -82,6 +82,20 @@ It asks up to three choice-based questions, writes a story brief, and **stops**.
 /ai-film-studio:next 1
 ```
 
+### On claude.ai
+
+Plugin commands are surfaced without the namespace, plus the skill itself:
+
+| Command | Does |
+|---|---|
+| `/film-studio` | the skill — free-form |
+| `/start <idea>` | new project, format question first |
+| `/next <n>` | write unit *n* |
+
+### Answering questions
+
+Every option list is **numbered**. Reply with a digit — `1`, `2`, `3` — or the name. The last option is always "something else", so you're never trapped by the suggestions.
+
 Repeat per unit. Or just talk to it — the skill triggers on its own when you ask for a short film, storyboard, shot list, or Flow prompts.
 
 ## What you get

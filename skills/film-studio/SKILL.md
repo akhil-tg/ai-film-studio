@@ -44,30 +44,47 @@ claude.ai conversations don't share a folder, so continuity must be carried expl
 
 ## Step 0 — Identify the format
 
-Everything downstream depends on this. If the user hasn't said, **ask first** — one question, with the options:
+Everything downstream depends on this. If the user hasn't said, **ask first** as a numbered list and accept either the number or the name:
 
-| Format | Aspect | Typical length | Reference |
-|---|---|---|---|
-| **Reel** (episodic or one-off) | 9:16 | 30–90s | `references/formats/reel.md` |
-| **YouTube Short** | 9:16 | 20–60s | `references/formats/youtube-short.md` |
-| **Landscape short film** | 16:9 | 3–15 min | `references/formats/landscape-short.md` |
-| **Long-form episode** | 16:9 | 5–20 min | `references/formats/long-episode.md` |
-| **Ad / commercial** | 9:16 or 16:9 | 15–60s | `references/formats/ad.md` |
-| **Music video** | 16:9 or 9:16 | song length | `references/formats/music-video.md` |
-| **Trailer / teaser** | 16:9 | 30–90s | `references/formats/trailer.md` |
-| **Documentary / faceless** | 16:9 or 9:16 | 3–15 min | `references/formats/documentary.md` |
+1. **Reel** — 9:16, 30–90s, one-off or episodic *(most common)*
+2. **YouTube Short** — 9:16, 20–60s
+3. **Landscape short film** — 16:9, 3–15 min
+4. **Long-form episode** — 16:9, 5–20 min
+5. **Ad / commercial** — 15–60s, 9:16 or 16:9
+6. **Music video** — song length
+7. **Trailer / teaser** — 30–90s
+8. **Documentary / faceless** — 3–15 min
+
+Keep that message short: the question, the eight lines, nothing else. No preamble, no explanation of what happens next.
+
+If the user names a format, skip the question entirely.
+
+Mapping you need, not the user:
+
+| Choice | Reference |
+|---|---|
+| Reel | `references/formats/reel.md` |
+| YouTube Short | `references/formats/youtube-short.md` |
+| Landscape short film | `references/formats/landscape-short.md` |
+| Long-form episode | `references/formats/long-episode.md` |
+| Ad / commercial | `references/formats/ad.md` |
+| Music video | `references/formats/music-video.md` |
+| Trailer / teaser | `references/formats/trailer.md` |
+| Documentary / faceless | `references/formats/documentary.md` |
 
 Read the format file **before** planning structure. It decides the beat template, shot budget, and shot grammar.
 
 ## Shared rules — every format
 
 1. **Never invent silently.** Every creative decision is shown before it becomes canon.
-2. **Max 3 questions per turn**, each with 2–3 concrete options. Never ask an open question a beginner can't answer.
-3. **Lock the bible.** Descriptions are pasted *verbatim* into every prompt. No synonyms, no rephrasing.
-4. **One shot = one action = one camera move.** If it needs "and then", it's two shots.
-5. **Generations are ≤10s. Shots are cut to 2–4s.** Plan for trimming.
-6. **Approve before volume.** Yes on the brief before scripts. Never dump 400 lines unasked.
-7. **Declare the aspect ratio once**, in `project.md`, and never mix it within a project.
+2. **Always number choices. Never bullets or letters.** A user replies with `1`, `2`, `3`. Accept the digit or the name. Every option list follows this, except the format list above, which is fixed.
+3. **Max 3 questions per turn**, each with 2–3 concrete options plus a final "something else" option. Never ask an open question a beginner can't answer.
+4. **Lock the bible.** Descriptions are pasted *verbatim* into every prompt. No synonyms, no rephrasing.
+5. **One shot = one action = one camera move.** If it needs "and then", it's two shots.
+6. **Generations are ≤10s. Shots are cut to 2–4s.** Plan for trimming.
+7. **Approve before volume.** Yes on the brief before scripts. Never dump 400 lines unasked.
+8. **Declare the aspect ratio once**, in `project.md`, and never mix it within a project.
+
 
 ## Phase 0 — Discovery
 
@@ -86,16 +103,19 @@ Runs when there's no `project.md`, or when the user gives a new idea.
 
 Ads and music videos replace these — use the format file's own structure instead.
 
-**Ask in batches of three, as choices:**
+**Ask in batches of three, as numbered choices:**
 
 > A phone that shows the future — three ways this could go:
-> **A)** He sees his own death in 24 hours and tries to stop it
-> **B)** He uses it to win money and loses everything
-> **C)** The phone shows a stranger who needs saving
 >
-> Which one, or describe your own?
+> 1. He sees his own death in 24 hours and tries to stop it
+> 2. He uses it to win money and loses everything
+> 3. The phone shows a stranger who needs saving
+> 4. Something else — describe it
+>
+> Reply with a number.
 
-Always offer "or your own". Wait before the next batch.
+Always include the "something else" option as the last number, and always end with how to answer. Wait before the next batch.
+
 
 **Write the brief and stop.** Create the project folder, write `project.md` and `00-brief.md`, summarise in chat, wait for a yes.
 
