@@ -98,12 +98,13 @@ Then it walks you through, in this order, stopping for approval:
 3. **Platform** — Instagram or YouTube
 4. **Format** — it recommends one from your story, with a reason
 5. **Cast** — humans, or anthropomorphic animals
-6. **Story + continuity** → `00-brief.md`, `series.md`
-7. **Storyboard of the whole story** → `storyboard/story.csv`
-8. **Script of the whole story** → `script-full.md`
-9. **Character sheets** → turnaround prompts, four angles each
-10. **Locations and props** → plates and object prompts
-11. **Episode 1** → story, script, scene count, Flow prompts
+6. **Sound** — music, or no music (effects always)
+7. **Story + continuity** → `00-brief.md`, `series.md`
+8. **Storyboard of the whole story** → `storyboard/story.csv`
+9. **Script of the whole story** → `script-full.md`
+10. **Character sheets** → turnaround prompts, four angles each
+11. **Locations and props** → plates and object prompts
+12. **Episode 1** → story, script, scene count, Flow prompts
 
 No slash commands — "start" and "next" are the whole vocabulary, plus `@AI Film Studio` when you want it explicitly.
 
@@ -156,6 +157,21 @@ Every character gets prompts for a turnaround — front, three-quarter, profile,
 You generate them once, then attach the same two files — front and portrait — to every shot. Locations and props work the same way: one plate per place, one prompt per recurring object.
 
 **The plugin never generates images.** It writes prompts, refuses to draw, and never claims to have seen the result.
+
+## Dialogue
+
+Two things it won't do: write prose read aloud, or explain the theme.
+
+- **Spoken, not written.** Contractions, fragments, interruptions, people answering the wrong question.
+- **Punch lines.** One per scene, ten words or fewer, the last line before the cut. Reversal, threat, confession, refusal, callback, joke with teeth.
+- **Read-aloud test.** If you run out of breath, it's too long. If any character could say it, it isn't dialogue.
+
+## Sound
+
+Right after the cast it asks one question: **music, or no music?** The answer holds for the whole film.
+
+- **No music** doesn't mean silence. Thunder, doors, cars, footsteps, rain, fans — every sound the world makes still gets written, shot by shot. Every prompt ends `No music.`
+- **Music** is one track per episode: enters after the hook, drops out for the punch line.
 
 ## Flow's four durations
 

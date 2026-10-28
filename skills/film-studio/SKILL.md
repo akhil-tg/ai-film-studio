@@ -88,6 +88,9 @@ Without a Project:
 12. **No subtitles unless asked.** On-screen hook text is not a subtitle.
 13. **Never generate images.** Prompts only — see Scope.
 14. **Animals means no humans.** Not in frame, background, crowd, posters, or reflections.
+15. **Dialogue must sound spoken.** Contractions, fragments, interruptions. If it reads like prose, rewrite it.
+16. **One punch line per scene, maximum.** It goes last, then you cut. Never explain it afterwards.
+17. **Music is a choice; effects are not.** No music still means thunder, doors, cars and footsteps.
 
 ---
 
@@ -201,6 +204,19 @@ Then: *"Change any of these — `2` to swap the mother, or name one yourself."*
 
 **Hard rule, never broken:** animals means **no humans anywhere**. Not in the background, not in a crowd, not on a poster, not reflected in a window. Every crowd is animals. Every extra is an animal.
 
+## Step 5 — Music
+
+Ask once, right after the cast:
+
+> Music, or no music?
+>
+> 1. No music — effects and ambience only
+> 2. Music — one track, used sparingly
+
+**No music does not mean silence.** Thunder, doors, cars, footsteps, rain, fans — every sound the world makes is still written, shot by shot. Music is the only optional layer.
+
+Record it in `project.md` → `Music: none` or `Music: one track`. Read `references/core/dialogue-audio.md` before writing any script.
+
 ---
 
 ## Phase 1 — Story and continuity
@@ -250,6 +266,9 @@ RAVI
 ```
 
 - Native line first, English paraphrase in brackets.
+- **Write spoken, not written.** Contractions, fragments, interruptions. If any character could say the line, it isn't dialogue — see `references/core/dialogue-audio.md`.
+- **Mark the punch line** with `▸`: one per scene, maximum, and it goes last.
+- **Sound note per scene**: ambience plus the effects the action makes. Every visible action that makes noise gets an effect.
 - Only lines that matter. This is a draft script, not a shooting script.
 - Mark the turn in each scene with a one-line note above it.
 
@@ -311,7 +330,7 @@ Read `references/core/flow-prompt-grammar.md` before writing any prompt.
 
 ```
 <project-slug>/
-├── project.md              format, aspect, length, language, status
+├── project.md              format, aspect, length, language, music, status
 ├── 00-brief.md             approved premise + cast
 ├── series.md               act map + episode index (series)
 ├── plan.md                 beat map (single piece)
@@ -345,6 +364,10 @@ Read `series.md` first if it exists, then `project.md` and `continuity.md`. Neve
 - [ ] If animals: is there a human anywhere in frame?
 - [ ] Does every shot have one action and one camera move?
 - [ ] Are descriptions byte-identical to the bible?
+- [ ] Read one exchange aloud — does it sound spoken?
+- [ ] One punch line per scene at most, landing on the cut?
+- [ ] Ambience on every shot, effects on every visible action?
+- [ ] If music was declined: does every prompt say `No music.`?
 - [ ] Does each scene have a turn?
 - [ ] Does the structure match the format reference?
 - [ ] Is text inside the safe zone?

@@ -48,6 +48,16 @@ Don't over-explain. The model has world knowledge and reads intent.
 - **Storyboard input** — attach a board with key beats and it follows the sequence.
 - **Text rendering** — Latin text can be placed and styled. **Malayalam, Tamil and Devanagari still garble** — never ask for them; add text in the edit.
 
+## Sound clauses
+
+Three layers, in this order, in every prompt:
+
+1. **Dialogue** — verbatim native line, then the locked voice descriptor
+2. **Ambience** — room tone, always. Never leave it blank.
+3. **Effects** — one per visible action: door, car, thunder, footsteps, phone.
+
+Then the music clause. If the project chose **no music**, end with `No music.` If it chose music, name genre, tempo and instrumentation with `no vocals`. The decision is per episode, never per shot.
+
 ## Paste the bible verbatim
 
 The description comes from `bible/characters.md` **byte for byte**. No synonyms, no shortening, no reordering. Small wording changes read as a different person. This is the entire point of the bible.
