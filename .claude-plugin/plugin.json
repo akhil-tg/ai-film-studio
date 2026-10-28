@@ -1,0 +1,25 @@
+{
+  "name": "ai-film-studio",
+  "version": "0.2.0",
+  "description": "Pre-production studio for AI-made films in Google Flow / Gemini Omni. Turns a rough idea into a locked bible, a structure plan, a storyboard, a screenplay, and copy-paste prompts — for Reels, YouTube Shorts, short films, long-form episodes, ads, music videos, trailers, and documentaries.",
+  "author": {
+    "name": "Akhil TG"
+  },
+  "keywords": [
+    "ai-film",
+    "short-film",
+    "reels",
+    "youtube-shorts",
+    "web-series",
+    "screenplay",
+    "storyboard",
+    "shot-list",
+    "commercial",
+    "music-video",
+    "trailer",
+    "documentary",
+    "google-flow",
+    "gemini-omni"
+  ],
+  "license": "MIT"
+}

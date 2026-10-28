@@ -1,0 +1,16 @@
+{
+  "name": "ai-film-studio-marketplace",
+  "owner": {
+    "name": "Akhil TG"
+  },
+  "metadata": {
+    "description": "Pre-production tools for AI-made films and episodic video, from vertical Reels to 16:9 short films."
+  },
+  "plugins": [
+    {
+      "name": "ai-film-studio",
+      "source": "./",
+      "description": "Pre-production studio for AI-made films in Google Flow / Gemini Omni: locked bible, structure plan, storyboard, screenplay, and copy-paste prompts for eight formats."
+    }
+  ]
+}
