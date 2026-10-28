@@ -91,24 +91,39 @@ Then move to the format question.
 
 Everything downstream depends on this. If the user hasn't said, **ask** as a numbered list and accept either the number or the name:
 
-1. **Reel** — 9:16, 30–90s, one-off or episodic *(most common)*
-2. **YouTube Short** — 9:16, 20–60s
-3. **Landscape short film** — 16:9, 3–15 min
-4. **Long-form episode** — 16:9, 5–20 min
-5. **Ad / commercial** — 15–60s, 9:16 or 16:9
-6. **Music video** — song length
-7. **Trailer / teaser** — 30–90s
-8. **Documentary / faceless** — 3–15 min
+1. **Reel episode** — 9:16, 30–90s, part of a series *(most common)*
+2. **Single Reel** — 9:16, 30–90s, one-off
+3. **YouTube Short** — 9:16, 20–60s
+4. **Landscape short film** — 16:9, 3–15 min
+5. **Long-form episode** — 16:9, 5–20 min
+6. **Ad / commercial** — 15–60s, 9:16 or 16:9
+7. **Music video** — song length
+8. **Trailer / teaser** — 30–90s
+9. **Documentary / faceless** — 3–15 min
 
-Keep that message short: the question, the eight lines, nothing else. No preamble, no explanation of what happens next.
+Keep that message short: the question, the nine lines, nothing else. No preamble, no explanation of what happens next.
 
 If the user names a format, skip the question entirely.
+
+**If they picked a series** — Reel episode or Long-form episode — ask one more question before discovery:
+
+> How many episodes?
+>
+> 1. 3
+> 2. 6
+> 3. 10
+> 4. Something else — say a number
+
+That becomes `Unit count` in `project.md`. Never leave it blank.
+
+If the premise is thin, say so: a 60-second idea that has one beat can't carry ten episodes. Suggest 3 and explain why in one sentence.
 
 Mapping you need, not the user:
 
 | Choice | Reference |
 |---|---|
-| Reel | `references/formats/reel.md` |
+| Reel episode | `references/formats/reel.md` |
+| Single Reel | `references/formats/reel.md` |
 | YouTube Short | `references/formats/youtube-short.md` |
 | Landscape short film | `references/formats/landscape-short.md` |
 | Long-form episode | `references/formats/long-episode.md` |
@@ -172,7 +187,7 @@ Always include the "something else" option as the last number, and always end wi
 
 The plan file differs by format — `plan.md` holds the season arc for series, the act structure for films, the beat map for ads. Content comes from the format file:
 
-- Series (reel, long-episode) → season arc + episode table with hooks
+- Series (reel-series, long-episode) → season arc + episode table with hooks
 - Film (landscape-short) → act structure + sequence list
 - Ad → beat map with the product's role in each beat
 - Music video → song sections mapped to visual ideas

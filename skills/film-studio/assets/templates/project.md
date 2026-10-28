@@ -3,7 +3,7 @@
 > Every field is a decision. Ask, don't guess.
 
 - **Title:** 
-- **Format:** reel | youtube-short | landscape-short | long-episode | ad | music-video | trailer | documentary
+- **Format:** reel-series | reel-single | youtube-short | landscape-short | long-episode | ad | music-video | trailer | documentary
 - **Aspect ratio:** 9:16 (1080×1920) | 16:9 (1920×1080)
 - **Unit length:** 
 - **Unit count:** 
