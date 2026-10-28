@@ -2,6 +2,8 @@
 
 Read before writing any dialogue or on-screen text, for any project not in English.
 
+**Language is chosen at Step 0**, before format. It is never inferred late, and never changed mid-project.
+
 ## The rule
 
 **Prompts are English. Dialogue is not.**

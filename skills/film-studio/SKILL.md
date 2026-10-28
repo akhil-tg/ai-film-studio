@@ -42,9 +42,38 @@ claude.ai conversations don't share a folder, so continuity must be carried expl
 2. **New chat?** Ask the user to paste back the brief and the continuity log before writing anything. If they can't, restart discovery rather than inventing.
 3. **Recommend a Claude Project** for any series: put the brief, bible, and continuity in project knowledge so every chat inherits them. Mention this once, at project start.
 
-## Step 0 — Identify the format
+## Step 0 — Language
 
-Everything downstream depends on this. If the user hasn't said, **ask first** as a numbered list and accept either the number or the name:
+The **first** question, always. Nothing downstream gets written until it's known: dialogue, on-screen text, the voice descriptor, and even how prompts are phrased.
+
+If the user hasn't already said, ask — one short message, numbered, nothing else:
+
+1. **English**
+2. **Malayalam**
+3. **Hindi**
+4. **Tamil**
+5. Something else — name it
+
+Reply with a number.
+
+Skip the question only when it's unambiguous:
+
+- They wrote the idea in Malayalam → Malayalam
+- They said "in Malayalam", "Malayalam reel", "my Malayalam series" → that language
+- They wrote in English about an English-language film → English
+
+**Don't infer language from setting.** A story set in Kerala can be Malayalam *or* English. If the idea is in English and no language was named, ask — don't assume.
+
+Once answered, it's fixed for the project:
+
+- `project.md` → `Language:` and `Subtitles: none` (the default)
+- Read `references/core/language.md` before writing dialogue, and `references/languages/<language>.md` if it exists
+
+Then move to the format question.
+
+## Step 1 — Format
+
+Everything downstream depends on this. If the user hasn't said, **ask** as a numbered list and accept either the number or the name:
 
 1. **Reel** — 9:16, 30–90s, one-off or episodic *(most common)*
 2. **YouTube Short** — 9:16, 20–60s
@@ -77,7 +106,7 @@ Read the format file **before** planning structure. It decides the beat template
 ## Shared rules — every format
 
 1. **Never invent silently.** Every creative decision is shown before it becomes canon.
-2. **Always number choices. Never bullets or letters.** A user replies with `1`, `2`, `3`. Accept the digit or the name. Every option list follows this, except the format list above, which is fixed.
+2. **Always number choices. Never bullets or letters.** A user replies with `1`, `2`, `3`. Accept the digit or the name. Every option list, in every phase, follows this.
 3. **Max 3 questions per turn**, each with 2–3 concrete options plus a final "something else" option. Never ask an open question a beginner can't answer.
 4. **Lock the bible.** Descriptions are pasted *verbatim* into every prompt. No synonyms, no rephrasing.
 5. **Prompts are English; dialogue is native.** All scene, camera, and style language is English. Any spoken line is quoted verbatim in the project language, in native script, inside the prompt. Never translate a line into English inside a prompt.
@@ -119,9 +148,7 @@ Ads and music videos replace these — use the format file's own structure inste
 
 Always include the "something else" option as the last number, and always end with how to answer. Wait before the next batch.
 
-**Set the language.** Infer it from how the user writes, and from the idea itself. If they write in Malayalam, or ask for a Malayalam film, that's the project language — don't ask. If it's genuinely unclear, make it one of your three questions.
-
-Once set, `project.md` records `Language:` and `Subtitles:`, and you read `references/core/language.md` before writing any dialogue. That file governs how a line goes into a prompt.
+**Language is already settled.** Step 0 recorded it in `project.md` — never re-ask here. It only shapes Phase 0 in one way: the three-question options and the brief are written in that language's context, not generic-English context.
 
 **Write the brief and stop.** Create the project folder, write `project.md` and `00-brief.md`, summarise in chat, wait for a yes.
 

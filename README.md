@@ -76,7 +76,7 @@ powershell -ExecutionPolicy Bypass -File scripts/build-skill-zip.ps1
 /ai-film-studio:start a boy finds a phone that shows the future, as a reel series
 ```
 
-It asks up to three choice-based questions, writes a story brief, and **stops**. Once approved:
+It asks the **language** first, then the format, then up to three story questions. Then it writes a story brief and **stops**. Once approved:
 
 ```
 /ai-film-studio:next 1
@@ -89,12 +89,14 @@ Plugin commands are surfaced without the namespace, plus the skill itself:
 | Command | Does |
 |---|---|
 | `/film-studio` | the skill — free-form |
-| `/start <idea>` | new project, format question first |
+| `/start <idea>` | new project — language first, then format |
 | `/next <n>` | write unit *n* |
 
 ### Answering questions
 
 Every option list is **numbered**. Reply with a digit — `1`, `2`, `3` — or the name. The last option is always "something else", so you're never trapped by the suggestions.
+
+The first question in a new project is always the **language**, because it changes the dialogue, the on-screen text, and the voice — not just the translation.
 
 Repeat per unit. Or just talk to it — the skill triggers on its own when you ask for a short film, storyboard, shot list, or Flow prompts.
 
