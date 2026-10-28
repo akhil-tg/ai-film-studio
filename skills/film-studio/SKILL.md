@@ -219,7 +219,33 @@ Record it in `project.md` → `Music: none` or `Music: one track`. Read `referen
 
 ---
 
-## Phase 1 — Story and continuity
+## Phase 1 — Character build
+
+Immediately after the cast decision, before the story work. You need the reference images before anything can be generated.
+
+`bible/character-sheets.md` — read `references/core/character-sheet.md`.
+
+**One plain prompt per character.** Not a menu, not four separate prompts, not a table of fields. A single block of continuous prose the user copies into Flow exactly as written.
+
+- **One character per prompt.** Never the whole cast in one image.
+- **Plain text.** No headings, no bullets, no labels, no placeholders inside the block. One paragraph.
+- **80–150 words, and specific.** Age, build, height, face shape, eyes, hair or fur with exact markings, every garment with colour and material, footwear, one distinguishing feature.
+- **Name the views:** full-body front, three-quarter, side, back — same scale, same character, identical clothing and colours in all four.
+- **Neutral background, even light, no props.** A reference sheet, not a poster.
+- **Animals:** anthropomorphic, upright, human proportions, human hands with fingers, human clothing; no humans in frame.
+- **Aspect ratio last.**
+
+Then say: *"Generate this in Flow and save it as `refs/<name>-sheet.png`. If the four views come out as four different characters, tell me — I'll give you the per-angle fallback."*
+
+That sheet is the only image that matters. Every later shot attaches it.
+
+The paragraph is also the **locked description**: it goes into `bible/characters.md` verbatim, and the voice is locked in the same pass.
+
+Show the whole cast in one message, numbered, one block each — not one message per character.
+
+Never generate the image, and never describe a result you haven't seen.
+
+## Phase 2 — Story and continuity
 
 Files:
 
@@ -231,7 +257,7 @@ Continuity starts here, not later. Record: world rules, timeline, what the audie
 
 Show it. Get approval.
 
-## Phase 2 — Storyboard for the whole story
+## Phase 3 — Storyboard for the whole story
 
 `storyboard/story.csv` — **one row per scene**, for the entire story, not per shot.
 
@@ -247,7 +273,7 @@ Rules:
 
 Show the scene count per episode. Get approval.
 
-## Phase 3 — Script for the whole story
+## Phase 4 — Script for the whole story
 
 `script-full.md` — every scene in order, with the dialogue that matters. Batch by act; never one 400-line message.
 
@@ -271,19 +297,6 @@ RAVI
 - **Sound note per scene**: ambience plus the effects the action makes. Every visible action that makes noise gets an effect.
 - Only lines that matter. This is a draft script, not a shooting script.
 - Mark the turn in each scene with a one-line note above it.
-
-## Phase 4 — Character sheets
-
-`bible/character-sheets.md` — read `references/core/character-sheet.md`.
-
-Per character, four things:
-
-1. **Locked description** — 40–60 words, pasted verbatim into every prompt
-2. **Voice line** — register, accent, texture
-3. **Turnaround prompts** — front, three-quarter, profile, back, full body. Separate prompts, same wording
-4. **Expression sheet** — 4–6 named states
-
-These are prompts for image generation. Write them, hand them over, never generate the images.
 
 ## Phase 5 — Locations and props
 
@@ -364,6 +377,7 @@ Read `series.md` first if it exists, then `project.md` and `continuity.md`. Neve
 - [ ] If animals: is there a human anywhere in frame?
 - [ ] Does every shot have one action and one camera move?
 - [ ] Are descriptions byte-identical to the bible?
+- [ ] One plain prompt per character, one character per prompt, no field labels?
 - [ ] Read one exchange aloud — does it sound spoken?
 - [ ] One punch line per scene at most, landing on the cut?
 - [ ] Ambience on every shot, effects on every visible action?
@@ -383,7 +397,7 @@ Read `series.md` first if it exists, then `project.md` and `continuity.md`. Neve
 | `references/core/language.md` | any non-English project |
 | `references/languages/<language>.md` | a language with a dedicated file |
 | `references/core/animal-cast.md` | anthropomorphic animal casts |
-| `references/core/character-sheet.md` | turnaround and expression prompts |
+| `references/core/character-sheet.md` | one plain prompt per character |
 | `references/core/locations-props.md` | place and object references |
 | `references/core/flow-prompt-grammar.md` | any prompt |
 | `references/core/shot-grammar-vertical.md` | 9:16 storyboards |

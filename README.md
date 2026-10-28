@@ -99,10 +99,10 @@ Then it walks you through, in this order, stopping for approval:
 4. **Format** — it recommends one from your story, with a reason
 5. **Cast** — humans, or anthropomorphic animals
 6. **Sound** — music, or no music (effects always)
-7. **Story + continuity** → `00-brief.md`, `series.md`
-8. **Storyboard of the whole story** → `storyboard/story.csv`
-9. **Script of the whole story** → `script-full.md`
-10. **Character sheets** → turnaround prompts, four angles each
+7. **Character build** — one plain prompt per character, generated in Flow
+8. **Story + continuity** → `00-brief.md`, `series.md`
+9. **Storyboard of the whole story** → `storyboard/story.csv`
+10. **Script of the whole story** → `script-full.md`
 11. **Locations and props** → plates and object prompts
 12. **Episode 1** → story, script, scene count, Flow prompts
 
@@ -150,11 +150,13 @@ Swap any of them. From then on one rule holds: **no humans**. Not in the backgro
 
 ## Character sheets
 
-Every character gets prompts for a turnaround — front, three-quarter, profile, back — plus a portrait and six expressions.
+Right after casting, every character gets **one plain prompt**: a single paragraph you copy into Flow as-is. It asks for a reference sheet — front, three-quarter, side and back, same scale, same character — with the full description, wardrobe and one distinguishing mark baked in.
 
-**One prompt per angle.** A single "character sheet" prompt returns four different characters; four prompts return one.
+No labels, no fields, no "front view:" sub-prompts. One block, one character.
 
-You generate them once, then attach the same two files — front and portrait — to every shot. Locations and props work the same way: one plate per place, one prompt per recurring object.
+If the four views come back as four different people, the fallback splits it: keep the front, then generate the rest from it as an image reference.
+
+You do this once, then attach `refs/<name>-sheet.png` to every shot. Locations and props work the same way.
 
 **The plugin never generates images.** It writes prompts, refuses to draw, and never claims to have seen the result.
 
