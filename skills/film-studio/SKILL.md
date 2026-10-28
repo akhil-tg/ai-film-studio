@@ -58,7 +58,7 @@ Long projects die from a full window, not from bad prompts.
 1. **One unit per chat.** When an episode is finished, end with: *"Start a new chat for the next one and say `continue episode 2` — I'll read the project files."* Never write two episodes in one thread.
 2. **Files over text.** If the host can write files, every document goes to a file and the chat holds only the decision.
 3. **Never restate the whole bible.** Quote the lines this batch uses.
-4. **Batch the long ones.** Storyboards and prompts ship 6–8 shots per message: `### prompts.md — shots 1–8 of 14`.
+4. **One scene per message, in chat.** Prompts never ship as a whole episode — one scene per message, each shot its own copy block. With files, write the whole file. Storyboards ship 6–8 rows.
 5. **Continuity is a log, not prose.** One line per unit.
 6. **Don't echo.** No "here's what I just did" recap.
 7. **Re-read from files, never from memory.** On resume, read `series.md`, `project.md`, `continuity.md` first.
@@ -317,6 +317,15 @@ Then: *"That's episode 1. Say `next` for episode 2, or regenerate shots and tell
 
 ## Phase 7 — Flow prompts
 
+**Before the first prompt**, deliver `bible/flow-agent.md` — one block of standing instructions, pasted into Flow once. Read `references/core/flow-agent.md`. It comes first, never buried in the shot list.
+
+Then deliver **scene by scene**:
+
+- **In chat, one scene per message.** Never a whole episode. With files, write the whole file and paste only the scene being shot.
+- **Every shot is its own block** — one plain paragraph, ready to paste.
+- The scene header says location and time; shots are numbered inside it.
+- A scene with more than eight shots splits across messages, with the part stated.
+
 One block per shot, fixed order:
 
 ```
@@ -357,6 +366,7 @@ Read `references/core/flow-prompt-grammar.md` before writing any prompt. If a pr
 │   ├── characters.md       locked blocks + voices
 │   ├── character-sheets.md turnaround prompts
 │   ├── locations.md        location + prop prompts
+│   ├── flow-agent.md       standing instructions for Flow
 │   ├── world.md
 │   ├── style.md
 │   └── motifs.md
@@ -381,6 +391,8 @@ Read `series.md` first if it exists, then `project.md` and `continuity.md`. Neve
 - [ ] Are descriptions byte-identical to the bible?
 - [ ] One plain prompt per character, one character per prompt, no field labels?
 - [ ] Is every Flow prompt one paragraph, 90–130 words, with no labels inside it?
+- [ ] Did the Flow agent instructions come before the first prompt?
+- [ ] One scene per message, each shot its own block?
 - [ ] Read one exchange aloud — does it sound spoken?
 - [ ] One punch line per scene at most, landing on the cut?
 - [ ] Ambience on every shot, effects on every visible action?
@@ -402,6 +414,7 @@ Read `series.md` first if it exists, then `project.md` and `continuity.md`. Neve
 | `references/core/animal-cast.md` | anthropomorphic animal casts |
 | `references/core/character-sheet.md` | one plain prompt per character |
 | `references/core/locations-props.md` | place and object references |
+| `references/core/flow-agent.md` | standing instructions before generating |
 | `references/core/flow-prompt-grammar.md` | any prompt |
 | `references/core/shot-grammar-vertical.md` | 9:16 storyboards |
 | `references/core/shot-grammar-horizontal.md` | 16:9 storyboards |

@@ -13,6 +13,7 @@ Copy into the project folder the skill creates. Filenames map 1:1, except bible 
 | `characters.md` | `<project>/bible/characters.md` |
 | `character-sheet.md` | `<project>/bible/character-sheets.md` |
 | `locations.md` | `<project>/bible/locations.md` |
+| `flow-agent.md` | `<project>/bible/flow-agent.md` |
 | `world.md` | `<project>/bible/world.md` |
 | `style.md` | `<project>/bible/style.md` |
 | `motifs.md` | `<project>/bible/motifs.md` |

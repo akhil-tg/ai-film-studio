@@ -104,7 +104,7 @@ Then it walks you through, in this order, stopping for approval:
 9. **Storyboard of the whole story** → `storyboard/story.csv`
 10. **Script of the whole story** → `script-full.md`
 11. **Locations and props** → plates and object prompts
-12. **Episode 1** → story, script, scene count, Flow prompts
+12. **Episode 1** → story, script, scene count, Flow agent instructions, scene-by-scene prompts
 
 No slash commands — "start" and "next" are the whole vocabulary, plus `@AI Film Studio` when you want it explicitly.
 
@@ -180,6 +180,12 @@ Right after the cast it asks one question: **music, or no music?** The answer ho
 Flow generates **4, 6, 8 or 10 seconds** — nothing else. Ask for 5 and you get something else.
 
 Final cuts are 2–4s, so shots are generated long and trimmed. Anything longer than 10 seconds is extended in 10-second steps, up to 40.
+
+## Before you generate
+
+Flow gets one standing instruction block per project — style, continuity, voice, no humans if animals, music policy, no text, the four durations. Paste it once, before the first video, and leave it alone.
+
+Then prompts arrive **scene by scene**: one scene per message, each shot a single plain block you copy without editing.
 
 ## Plain prompts
 

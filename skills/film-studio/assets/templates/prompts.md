@@ -1,19 +1,22 @@
-# unit-01 — <TITLE> · Flow prompts
+# ep01 — <TITLE> · Flow prompts
 
 Aspect: · Resolution plan: 360p draft → 1080p keepers. · Music: none / one track
 
-> Each prompt is **one plain paragraph**. The metadata above is for you; the block is for Flow.
-> Copy the block exactly — nothing inside it is a placeholder, and nothing needs assembling.
+> Paste `bible/flow-agent.md` into Flow **once**, before the first shot.
+> Then take scenes in order. **One scene per message. Every shot is its own block.**
+> Copy a block exactly — nothing inside it is a placeholder.
 
 **Upload order:** character sheet first, then location, then props.
-**Global negatives:** no text, no subtitles, no captions, no logo, no watermark.
 
 ---
 
-## Shot 01
+## Scene 01 — <location>, <day/night>
+
+**Shots:** · **Runtime:** · **Continues from:**
+
+### Shot 1.1
 
 **Duration:** · **Task:** · **Upload:** · **Continues from:**
-**Aspect:** · **Resolution:**
 
 ```
 <one plain paragraph, in this order: locked description, action, setting, camera size and move, light source, style, dialogue and voice, ambience and effects, negatives, duration, aspect ratio>
@@ -21,12 +24,19 @@ Aspect: · Resolution plan: 360p draft → 1080p keepers. · Music: none / one t
 
 **Expect:**
 
----
-
-## Shot 02
+### Shot 1.2
 
 **Duration:** · **Task:** · **Upload:** · **Continues from:**
-**Aspect:** · **Resolution:**
+
+```
+<one plain paragraph>
+```
+
+**Expect:**
+
+### Shot 1.3
+
+**Duration:** · **Task:** · **Upload:** · **Continues from:**
 
 ```
 <one plain paragraph>
@@ -36,10 +46,13 @@ Aspect: · Resolution plan: 360p draft → 1080p keepers. · Music: none / one t
 
 ---
 
-## Shot 03
+## Scene 02 — <location>, <day/night>
+
+**Shots:** · **Runtime:** · **Continues from:**
+
+### Shot 2.1
 
 **Duration:** · **Task:** · **Upload:** · **Continues from:**
-**Aspect:** · **Resolution:**
 
 ```
 <one plain paragraph>
@@ -53,8 +66,8 @@ Aspect: · Resolution plan: 360p draft → 1080p keepers. · Music: none / one t
 
 | Shot | Attempts | Chosen | Notes |
 |---|---|---|---|
-| 01 | | | |
-| 02 | | | |
+| 1.1 | | | |
+| 1.2 | | | |
 
 ## Upscale queue
 
