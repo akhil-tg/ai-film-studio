@@ -153,11 +153,17 @@ Never regenerate to fix a small thing. Edit the clip you have; it keeps the face
 
 ## Writing style
 
+**One paragraph. Plain prose. Nothing else.**
+
+The block the user pastes contains no headings, no labels, no field prefixes, no bullets. Just sentences, in the fixed order, ending with the duration and the ratio.
+
 - **Concrete nouns over adjectives.** "Grey hoodie" beats "casual clothes".
 - **One action, present tense.** "He lifts his head."
 - **Name the light source**, not the mood. "Sodium streetlight from above" beats "moody".
 - **Cut adverbs** unless they change timing.
-- **Stay under ~120 words.** Beyond that, models drop clauses — usually audio first.
+- **90–130 words of detail.** Every shot carries the locked description, the action, the place, the camera, the light, the style, the dialogue with voice, the ambience with effects, the negatives, the duration and the ratio. If it runs long, cut adjectives, not facts.
+- **No internal line breaks.** A wrapped paragraph is fine; a list is not.
+- **Nothing to edit.** No placeholders, no field labels, no "insert name here".
 - **State the duration explicitly.** "6 seconds."
 
 ## Failure modes
@@ -179,24 +185,23 @@ Never regenerate to fix a small thing. Edit the clip you have; it keeps the face
 
 ## Deliverable format
 
-One block per shot:
+Per shot: a few lines of metadata for the user, then **one plain paragraph** for Flow. Everything above the block is a note; everything inside it is the prompt.
 
 ````markdown
-### Shot 03 — close-up, slow push in
+### Shot 03
 
 **Duration:** 6s (cut to 3s) · **Task:** `reference_to_video`
-**Upload:** `refs/arjun.png`, `refs/bedroom-night.png`
+**Upload:** `refs/arjun-sheet.png`, `refs/bedroom-night.png`
 **Resolution:** 720p · **Aspect:** 9:16
 **Continues from:** shot 02 final frame
 
 ```
-Arjun, 17, thin, ... [verbatim bible] ...
-He slowly lifts his head toward the window. Close-up, slow push in.
-Cold blue moonlight from the left. Gritty, desaturated, 35mm.
-No music. Rain on tiles, a ceiling fan. No text. 6 seconds. Vertical 9:16.
+Arjun, 17, thin, dark brown skin, sharp jaw, short black hair with a faded undercut, an oversized grey hoodie with the hood down, and a small scar through his left eyebrow, stands at the window and slowly lifts his head. A small bedroom at night, cold blue moonlight from the left, rain running down the glass. Close-up, slow push in. Gritty, desaturated, 35mm, shallow depth of field. No dialogue. No music. Rain on tiles and a ceiling fan ticking. No text, no subtitles, no logo, no watermark. 6 seconds. Vertical 9:16.
 ```
 
 **Expect:** eyes fill the frame by the end; stable enough to cut on.
 ````
+
+No line breaks inside the block. No labels. Nothing for the user to assemble — they copy the paragraph and paste it.
 
 The `Expect` line matters — it's how the user judges the take without you.

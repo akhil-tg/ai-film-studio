@@ -1,49 +1,51 @@
 # unit-01 — <TITLE> · Flow prompts
 
-Aspect: · Resolution plan: 360p draft → 720p/1080p keepers.
+Aspect: · Resolution plan: 360p draft → 1080p keepers. · Music: none / one track
 
-**Upload order:** character reference first, then location, then props. Order matters.
+> Each prompt is **one plain paragraph**. The metadata above is for you; the block is for Flow.
+> Copy the block exactly — nothing inside it is a placeholder, and nothing needs assembling.
 
-**Global negatives:** `No text, no subtitles, no captions, no logo, no watermark.`
-
----
-
-### Shot 01 — extreme close-up, static (2s)
-
-**Upload:** `refs/phone.png`
-**Task:** `image_to_video` · **Resolution:** 360p draft
-
-```
-<locked description> + <action> + <setting> + <camera> + <lighting> + <style> + <audio> + <negatives> + <aspect>.
-```
-
-**Expect:** 
+**Upload order:** character sheet first, then location, then props.
+**Global negatives:** no text, no subtitles, no captions, no logo, no watermark.
 
 ---
 
-### Shot 02 — medium, static (6s)
+## Shot 01
 
-**Upload:** `refs/<character>.png`, then `refs/<location>.png`
-**Task:** `reference_to_video` · **Resolution:** 360p draft
+**Duration:** · **Task:** · **Upload:** · **Continues from:**
+**Aspect:** · **Resolution:**
 
 ```
-...
+<one plain paragraph, in this order: locked description, action, setting, camera size and move, light source, style, dialogue and voice, ambience and effects, negatives, duration, aspect ratio>
 ```
 
-**Expect:** 
+**Expect:**
 
 ---
 
-### Shot 03 — close-up, slow push in (6s)
+## Shot 02
 
-**Upload:** 
-**Task:** · **Resolution:** 
+**Duration:** · **Task:** · **Upload:** · **Continues from:**
+**Aspect:** · **Resolution:**
 
 ```
-...
+<one plain paragraph>
 ```
 
-**Expect:** 
+**Expect:**
+
+---
+
+## Shot 03
+
+**Duration:** · **Task:** · **Upload:** · **Continues from:**
+**Aspect:** · **Resolution:**
+
+```
+<one plain paragraph>
+```
+
+**Expect:**
 
 ---
 
@@ -58,4 +60,4 @@ Aspect: · Resolution plan: 360p draft → 720p/1080p keepers.
 
 Approved for 1080p:
 
-- 
+-

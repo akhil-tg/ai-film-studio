@@ -325,6 +325,8 @@ One block per shot, fixed order:
 [negatives] + [duration + aspect]
 ```
 
+**That order is your private checklist — not the output format.** What the user pastes is **one plain paragraph**: no labels, no brackets, no bullets, no internal line breaks. Sentences in that order, 90–130 words, detailed enough to shoot from and ready to paste with nothing to edit.
+
 Per shot, also state:
 
 - **Duration** — 4, 6, 8, or 10 seconds. Nothing else.
@@ -335,7 +337,7 @@ Per shot, also state:
 
 Dialogue and voice go **before** ambience. Clauses at the end of a long prompt get dropped first.
 
-Read `references/core/flow-prompt-grammar.md` before writing any prompt.
+Read `references/core/flow-prompt-grammar.md` before writing any prompt. If a prompt contains a field label — "Camera:", "Audio:", "Style:" — it is wrong.
 
 ---
 
@@ -378,6 +380,7 @@ Read `series.md` first if it exists, then `project.md` and `continuity.md`. Neve
 - [ ] Does every shot have one action and one camera move?
 - [ ] Are descriptions byte-identical to the bible?
 - [ ] One plain prompt per character, one character per prompt, no field labels?
+- [ ] Is every Flow prompt one paragraph, 90–130 words, with no labels inside it?
 - [ ] Read one exchange aloud — does it sound spoken?
 - [ ] One punch line per scene at most, landing on the cut?
 - [ ] Ambience on every shot, effects on every visible action?

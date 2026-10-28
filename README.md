@@ -181,6 +181,12 @@ Flow generates **4, 6, 8 or 10 seconds** — nothing else. Ask for 5 and you get
 
 Final cuts are 2–4s, so shots are generated long and trimmed. Anything longer than 10 seconds is extended in 10-second steps, up to 40.
 
+## Plain prompts
+
+Every Flow prompt is one paragraph of continuous prose — 90–130 words covering the character, the action, the place, the camera, the light, the style, the dialogue and voice, the ambience and effects, the negatives, the duration and the ratio.
+
+No labels, no bullets, no brackets, nothing to fill in. The metadata — duration, uploads, task mode — sits above the block, never inside it.
+
 ## Other languages
 
 You can make a film in **any language Flow speaks** — Malayalam, Tamil, Hindi, and so on. The split is simple:
