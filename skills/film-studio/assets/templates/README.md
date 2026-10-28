@@ -6,9 +6,13 @@ Copy into the project folder the skill creates. Filenames map 1:1, except bible 
 |---|---|
 | `project.md` | `<project>/project.md` |
 | `00-brief.md` | `<project>/00-brief.md` |
-| `plan.md` | `<project>/plan.md` |
+| `series.md` | `<project>/series.md` (series) |
+| `plan.md` | `<project>/plan.md` (single piece) |
 | `continuity.md` | `<project>/continuity.md` |
+| `story-scenes.csv` | `<project>/storyboard/story.csv` |
 | `characters.md` | `<project>/bible/characters.md` |
+| `character-sheet.md` | `<project>/bible/character-sheets.md` |
+| `locations.md` | `<project>/bible/locations.md` |
 | `world.md` | `<project>/bible/world.md` |
 | `style.md` | `<project>/bible/style.md` |
 | `motifs.md` | `<project>/bible/motifs.md` |

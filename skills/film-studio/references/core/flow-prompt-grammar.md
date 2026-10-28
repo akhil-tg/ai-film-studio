@@ -9,7 +9,7 @@ Fixed. Same sequence every time, so results are comparable and debuggable:
 ```
 [locked description] + [action] + [setting] + [camera: size + move] +
 [lighting] + [style] + [dialogue + voice] + [ambience + effects] +
-[negatives] + [aspect]
+[negatives] + [duration + aspect]
 ```
 
 Example:
@@ -20,7 +20,33 @@ Example:
 > standing alone on an empty wet road at night. Close-up, static camera. Cold
 > blue streetlight from above, warm sodium glow behind him. Gritty, desaturated,
 > shallow depth of field, 35mm look. No music. Distant traffic and rain.
-> No text, no subtitles. Vertical 9:16.
+> No text, no subtitles. 6 seconds. Vertical 9:16.
+
+## Duration — four values only
+
+Flow generates **4, 6, 8 or 10 seconds**. Nothing else. Ask for 5 or 7 and you get something different from what you asked.
+
+| Want | Ask for |
+|---|---|
+| A cut, a look, a reaction | 4s |
+| One line and the response | 6s |
+| Two beats of action | 8s |
+| A full beat with movement | 10s |
+
+Final cuts are 2–4s, so **generate longer than you need and trim**. Never generate the exact length you intend to cut to — you need handles on both ends.
+
+**Longer than 10s:** extend an existing clip in **10-second steps, up to 40 seconds**. State what happens next; the model continues from where it stopped.
+
+## What Omni already knows
+
+Don't over-explain. The model has world knowledge and reads intent.
+
+- **Framing and motion** — name the size and one move: "medium, slow push in". Not "cinematic camera work".
+- **One continuous take** — "oner" or "one continuous shot" is understood.
+- **Complex action** — describe it once; it carries the action across the scene. No frame-by-frame.
+- **Style transformation** — "same motion, risograph print look" works, and keeps the blocking.
+- **Storyboard input** — attach a board with key beats and it follows the sequence.
+- **Text rendering** — Latin text can be placed and styled. **Malayalam, Tamil and Devanagari still garble** — never ask for them; add text in the edit.
 
 ## Paste the bible verbatim
 
@@ -57,8 +83,9 @@ Declare one per shot. Flow infers from context, but naming it keeps shots consis
 | `text_to_video` | Pure generation, no references |
 | `image_to_video` | One still becomes motion |
 | `reference_to_video` | Character / location / style references |
+| `first/last frame` | Bridge two approved stills — orbits, loops, transitions |
+| `extend` | Continuing an existing clip, in 10s steps |
 | `edit` | Changing an already-generated clip |
-| `extend` | Continuing an existing clip |
 
 Google's guidance: prompt first, use `task` when the model guesses wrong or the mode must be locked.
 
@@ -101,12 +128,18 @@ Draft cheap, upscale once. Never discover a bad shot at 4k.
 
 ## Continuity across shots
 
+In order of reliability:
+
 1. **Same references + verbatim description** — default, costs nothing.
-2. **First/last frame interpolation** — feed the previous shot's final frame as the new first frame. Use when a character must not change.
+2. **First/last frame** — feed the previous shot's final frame as the new shot's first frame. Use when a face or a prop must not change. Also the tool for orbits, loops and match cuts.
+3. **Extend** — one continuous action longer than 10 seconds. Up to 40s, in 10s steps.
+4. **Reference video** — for motion, not identity. Roughly 3 seconds; trim before uploading.
 
 For `edit`, the model is stateful — describe only the change:
 
 > Make the violin invisible. Keep everything else identical.
+
+Never regenerate to fix a small thing. Edit the clip you have; it keeps the face.
 
 ## Writing style
 
@@ -115,6 +148,7 @@ For `edit`, the model is stateful — describe only the change:
 - **Name the light source**, not the mood. "Sodium streetlight from above" beats "moody".
 - **Cut adverbs** unless they change timing.
 - **Stay under ~120 words.** Beyond that, models drop clauses — usually audio first.
+- **State the duration explicitly.** "6 seconds."
 
 ## Failure modes
 
@@ -123,10 +157,14 @@ For `edit`, the model is stateful — describe only the change:
 | Face changes between shots | description reworded | paste bible verbatim |
 | Character morphs into the background | reference roles unclear | say which image is face, which is place |
 | Unwanted text appears | not negated | add "no text, no subtitles" |
+| Garbled non-Latin text | asked the model to render it | no text; add it in the edit |
 | Music you didn't ask for | not negated | add "no music" |
 | Two actions in one clip | shot too big | split the shot |
+| Clip is the wrong length | asked for 3, 5, 7 or 9 seconds | 4, 6, 8 or 10 only |
+| Lip sync drifts | line too long for the duration | shorten the line or move to 8–10s |
 | Hands look wrong | fine motor work | reframe on face or object |
 | Dead first second | started from rest | start mid-action |
+| Human appears in an animal cast | not negated | "no humans, no people" in every prompt |
 | Subject too small / too wide | wrong aspect grammar | see the shot-grammar file for your ratio |
 
 ## Deliverable format
@@ -134,19 +172,21 @@ For `edit`, the model is stateful — describe only the change:
 One block per shot:
 
 ````markdown
-### Shot 03 — close-up, push in (3s)
+### Shot 03 — close-up, slow push in
 
-**Upload:** `refs/arjun.png`
-**Task:** `reference_to_video` · **Resolution:** 720p · **Aspect:** 9:16
+**Duration:** 6s (cut to 3s) · **Task:** `reference_to_video`
+**Upload:** `refs/arjun.png`, `refs/bedroom-night.png`
+**Resolution:** 720p · **Aspect:** 9:16
+**Continues from:** shot 02 final frame
 
 ```
 Arjun, 17, thin, ... [verbatim bible] ...
-He slowly lifts his head toward a flickering streetlight. Close-up, slow push
-in. Cold blue streetlight from above. Gritty, desaturated, 35mm.
-No music. Distant traffic, rain on metal. No text. Vertical 9:16.
+He slowly lifts his head toward the window. Close-up, slow push in.
+Cold blue moonlight from the left. Gritty, desaturated, 35mm.
+No music. Rain on tiles, a ceiling fan. No text. 6 seconds. Vertical 9:16.
 ```
 
-**Expect:** eyes fill frame by the end, stable enough to cut on.
+**Expect:** eyes fill the frame by the end; stable enough to cut on.
 ````
 
 The `Expect` line matters — it's how the user judges the take without you.
