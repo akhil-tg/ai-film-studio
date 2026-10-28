@@ -1,4 +1,7 @@
-# Format — Reel (vertical, episodic or one-off)
+# Format — Reel shorts (vertical, 30–90s)
+
+> For one long story told across 10–40 episodes, read `reel-arc.md` instead.
+> This file is the craft of a single 30–90s episode.
 
 Instagram Reels. The most demanding pacing of any format.
 

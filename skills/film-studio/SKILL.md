@@ -68,7 +68,8 @@ Long projects die from a full window, not from bad prompts. Every token you spen
 4. **Batch the two long ones.** `storyboard.csv` and `prompts.md` are where windows die. Deliver **6–8 shots per message** and end with *"Say next for shots 9–16."*
 5. **Continuity is a log, not prose.** One line per unit. If it needs scrolling, it has become a summary — cut it back.
 6. **Don't echo.** No "here's what I just did" recap. The document is the answer.
-7. **Re-read from files, never from memory.** When resuming, read `project.md` and `continuity.md` before writing a word. If they aren't available, ask — don't reconstruct from the conversation.
+7. **Re-read from files, never from memory.** When resuming, read `series.md`, `project.md` and `continuity.md` before writing a word. If they aren't available, ask — don't reconstruct from the conversation.
+8. **For a Reel movie, `series.md` is the whole handover.** Act map, one line per episode, status. A new chat should need nothing else to know where the film is.
 
 ## Step 0 — Language
 
@@ -103,38 +104,50 @@ Then move to the format question.
 
 Everything downstream depends on this. If the user hasn't said, **ask** as a numbered list and accept either the number or the name:
 
-1. **Reel episode** — 9:16, 30–90s, part of a series *(most common)*
-2. **Single Reel** — 9:16, 30–90s, one-off
-3. **YouTube Short** — 9:16, 20–60s
-4. **Landscape short film** — 16:9, 3–15 min
-5. **Long-form episode** — 16:9, 5–20 min
-6. **Ad / commercial** — 15–60s, 9:16 or 16:9
-7. **Music video** — song length
-8. **Trailer / teaser** — 30–90s
-9. **Documentary / faceless** — 3–15 min
+1. **Reel movie** — 9:16, 2–3 min episodes, one story across the series *(most common)*
+2. **Reel shorts** — 9:16, 30–90s, standalone episodes
+3. **Single Reel** — 9:16, 30–90s, one-off
+4. **YouTube Short** — 9:16, 20–60s
+5. **Landscape short film** — 16:9, 3–15 min
+6. **Long-form episode** — 16:9, 5–20 min
+7. **Ad / commercial** — 15–60s, 9:16 or 16:9
+8. **Music video** — song length
+9. **Trailer / teaser** — 30–90s
+10. **Documentary / faceless** — 3–15 min
 
-Keep that message short: the question, the nine lines, nothing else. No preamble, no explanation of what happens next.
+Keep that message short: the question, the ten lines, nothing else. No preamble, no explanation of what happens next.
 
 If the user names a format, skip the question entirely.
 
-**If they picked a series** — Reel episode or Long-form episode — ask one more question before discovery:
+**If they picked a series** — Reel movie, Reel shorts, or Long-form episode — ask one more question before discovery:
 
 > How many episodes?
 >
-> 1. 3
-> 2. 6
-> 3. 10
+> 1. 10
+> 2. 20
+> 3. 40
 > 4. Something else — say a number
 
 That becomes `Unit count` in `project.md`. Never leave it blank.
 
-If the premise is thin, say so: a 60-second idea that has one beat can't carry ten episodes. Suggest 3 and explain why in one sentence.
+**If they picked a Reel movie**, also ask the episode length:
+
+> Episode length?
+>
+> 1. 60–90 seconds
+> 2. 2 minutes
+> 3. 3 minutes
+
+That becomes `Unit length`. The answer changes the shot budget more than anything else — 12 shots or 30.
+
+If the premise is thin, say so: one beat can't carry forty episodes. Suggest a smaller number and explain why in one sentence.
 
 Mapping you need, not the user:
 
 | Choice | Reference |
 |---|---|
-| Reel episode | `references/formats/reel.md` |
+| Reel movie | `references/formats/reel-arc.md` |
+| Reel shorts | `references/formats/reel.md` |
 | Single Reel | `references/formats/reel.md` |
 | YouTube Short | `references/formats/youtube-short.md` |
 | Landscape short film | `references/formats/landscape-short.md` |
@@ -199,7 +212,8 @@ Always include the "something else" option as the last number, and always end wi
 
 The plan file differs by format — `plan.md` holds the season arc for series, the act structure for films, the beat map for ads. Content comes from the format file:
 
-- Series (reel-series, long-episode) → season arc + episode table with hooks
+- **Reel movie** → `series.md`: act map + the one-line episode index. This *is* the plan, and it's the file every new chat reads first. Write it before episode 1.
+- Reel shorts / long-episode → `plan.md` with an episode table and hooks
 - Film (landscape-short) → act structure + sequence list
 - Ad → beat map with the product's role in each beat
 - Music video → song sections mapped to visual ideas
@@ -263,8 +277,9 @@ Read `references/core/flow-prompt-grammar.md` before writing any prompt.
 <project-slug>/
 ├── project.md          format, aspect, length, language, status
 ├── 00-brief.md         approved premise
-├── plan.md             season / acts / beat map
-├── continuity.md       what changed, what must not drift
+├── series.md           act map + episode index (Reel movie — the resume file)
+├── plan.md             season / acts / beat map (other series formats)
+├── continuity.md       what must never drift
 ├── bible/
 │   ├── characters.md
 │   ├── world.md
@@ -283,7 +298,11 @@ Name units for the format: `ep01/` for series, `seq01/` for films, `act01/` for 
 
 ## Resuming
 
-Read `project.md` and `continuity.md` first. Never re-ask answered questions. Never contradict the continuity log — if a new idea conflicts, flag it and ask.
+Read `series.md` first if it exists, then `project.md` and `continuity.md`. Never re-ask answered questions. Never contradict the continuity log — if a new idea conflicts, flag it and ask.
+
+**Continue episode N** → check `series.md`: is N next, already written, or ahead of plan? Say which, then proceed.
+
+**Reel movie:** append N's logline, cliffhanger, and status to `series.md` when the episode is done. That's how the next chat finds its place.
 
 ## Before delivering anything
 
